@@ -1,0 +1,82 @@
+body {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.top {
+  background-color: #eeefef;
+  height: 180px;
+}
+
+.name {
+  padding-top: 30px;
+  text-align: center;
+  color: gray;
+  font-weight: 700;
+}
+
+h3 {
+  padding: 10px 30px;
+  color: gray;
+}
+
+#search-form {
+  margin: -20 px;
+}
+
+#search-submit {
+  color: white;
+  background: #8768fb;
+  padding: 10px;
+  margin: 50px 50px;
+  border-radius: 30px;
+  width: 100px;
+  height: 30px;
+  border-color: #8768fb;
+}
+
+.currentForcast {
+  color: gray;
+  margin: 50px 300px;
+}
+
+.city {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.weatherDescription {
+  font-style: italic;
+}
+
+.currentTemp {
+  font-size: 50px;
+}
+.tempClassification {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.currentImage {
+  margin: 0px -300px;
+}
+
+.future {
+  padding: 20px;
+  height: 250px;
+  display: block;
+  background-color: #8768fb;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  color: white;
+}
+
+.one {
+  font-weight: 700;
+}
