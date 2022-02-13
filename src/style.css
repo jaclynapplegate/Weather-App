@@ -48,8 +48,15 @@ h3 {
   font-style: italic;
 }
 
-.currentTemp {
-  font-size: 50px;
+.currentTemp .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+
+.currentTemp strong {
+  font-size: 64px;
+  line-height: 1;
 }
 .tempClassification {
   cursor: pointer;
