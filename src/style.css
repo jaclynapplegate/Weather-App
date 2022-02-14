@@ -15,23 +15,34 @@ body {
 }
 
 h3 {
+  text-align: center;
   padding: 10px 30px;
   color: gray;
 }
 
 #search-form {
-  margin: -20 px;
+  margin: 60px;
+  position: absolute;
+  right: 100px;
+}
+
+#search-text {
+  height: 50px;
+  width: 200px;
 }
 
 #search-submit {
   color: white;
   background: #8768fb;
-  padding: 10px;
-  margin: 50px 50px;
   border-radius: 30px;
   width: 100px;
-  height: 30px;
+  height: 50px;
   border-color: #8768fb;
+}
+
+.fas {
+  color: #8768fb;
+  size: 50px;
 }
 
 .currentForcast {
@@ -40,12 +51,17 @@ h3 {
 }
 
 .city {
-  font-size: 45px;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .weatherDescription {
   font-style: italic;
+}
+
+.currentTemp strong {
+  font-size: 64px;
+  line-height: 1;
 }
 
 .currentTemp .units {
@@ -54,10 +70,6 @@ h3 {
   top: -34px;
 }
 
-.currentTemp strong {
-  font-size: 64px;
-  line-height: 1;
-}
 .tempClassification {
   cursor: pointer;
 }

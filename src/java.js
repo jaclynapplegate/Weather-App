@@ -50,9 +50,9 @@ timeNow.innerHTML = `${hour}:${minutes} PM`;
 
 function showWeather(response) {
   document.querySelector(".city").innerHTML = response.data.name;
-  document.querySelector(".currentTemp").innerHTML = `${Math.round(
+  document.querySelector(".currentTemp strong").innerHTML = `${Math.round(
     response.data.main.temp
-  )}°<small>F</small>`;
+  )}`;
 }
 
 function searchForm(event) {
