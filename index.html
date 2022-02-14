@@ -12,131 +12,124 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="https://kit.fontawesome.com/004c95d449.js" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/004c95d449.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <div class= "container">
-      <div class= "weather-app-wrapper">
-    <div class="top">
-      <div class="row">
-        <div class="col-4">
-          <h1 class="name">Purple Moon Weather</h1>
-          <p class= "timeStamp"> 
-            <div id="date"> January 16, 2022 </div> 
-            <div id="time">10:00 AM</div>
-          </p>   
-        </div>
-        <div class="col-4">
-          <form id= "search-form">
-            <input type="text" placeholder="search city" id="search-text"/>
-            <input  type= "submit" value="search" id= "search-submit"/> 
-            <i class="fas fa-map-marker-alt"></i>
-          </form>
-          
-        </div>
-
-      
-
-        <div class="current">
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="top">
           <div class="row">
             <div class="col-4">
-              <div class="currentForcast">
-                <p>
-                  <div class="city">San Francisco</div> 
-                  <div class="currentTemp"><strong>18</strong> <span class="units"> °F  | °C</span>  </div>
-                </p>  
+              <h1 class="name">Purple Moon Weather</h1>
+              <p class="timeStamp"></p>
+              <div id="date">January 16, 2022</div>
+              <div id="time">10:00 AM</div>
+            </div>
+            <div class="col-4">
+              <form id="search-form">
+                <input type="text" placeholder="search city" id="search-text" />
+                <input type="submit" value="search" id="search-submit" />
+                <i class="fas fa-map-marker-alt"></i>
+              </form>
+            </div>
+
+            <div class="current">
+              <div class="row">
+                <div class="col-4">
+                  <img class="currentImage" src="media/sun.svg" alt="sun" />
+                </div>
               </div>
             </div>
 
-              <div class="col-4">
-                <div class= "weatherDetails">
+            <div class="col-4">
+              <div class="currentForcast">
+                <p class="city">San Francisco</p>
+                <p class="currentTemp">
+                  <strong>18</strong> <span class="units"> °F | °C</span>
+                </p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="weatherDetails">
                 <ul>
                   <li>Partly Cloudy</li>
                   <li>Humidity: 10%</li>
                   <li>Wind: 3 MPH</li>
                 </ul>
+              </div>
+            </div>
+
+            <div class="future">
+              <div class="row">
+                <div class="col-2">
+                  <div class="one">
+                    <p>Monday</p>
+                    <img src="media/rain.svg" alt="rain" width="120" />
+                    <p>52°F/33°F</p>
+                  </div>
                 </div>
-            </div>
-          </div>
-        </div>
 
-            <div class="col-4">
-              <img class="currentImage" src="media/sun.svg" alt="sun" />
+                <div class="col-2">
+                  <div class="one">
+                    <p>Tuesday</p>
+                    <img src="media/rain.svg" alt="rain" width="120" />
+                    <p>52°F/33°F</p>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="one">
+                    <p>Wednesday</p>
+                    <img src="media/rain.svg" alt="rain" width="120" />
+                    <p>52°F/33°F</p>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="one">
+                    <p>Thursday</p>
+                    <img src="media/rain.svg" alt="rain" width="120" />
+                    <p>52°F/33°F</p>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="one">
+                    <p>Friday</p>
+                    <img src="media/rain.svg" alt="rain" width="120" />
+                    <p>52°F/33°F</p>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="one">
+                    <p>Saturday</p>
+                    <img src="media/rain.svg" alt="rain" width="120" />
+                    <p>52°F/33°F</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
- 
         </div>
-
-        <div class="future">
-          <div class="row">
-            <div class="col-2">
-              <div class="one">
-                <p> Monday </p>
-                <img src="media/rain.svg" alt="rain" width="120"/>
-                <p>52°F/33°F</p>
-              </div>
-            </div>
-            
-            <div class="col-2">
-              <div class="one">
-                <p> Tuesday </p>
-                <img src="media/rain.svg" alt="rain" width="120"/>
-                <p>52°F/33°F</p>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="one">
-                <p> Wednesday </p>
-                <img src="media/rain.svg" alt="rain" width="120"/>
-                <p>52°F/33°F</p>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="one">
-                <p> Thursday </p>
-                <img src="media/rain.svg" alt="rain" width="120"/>
-                <p>52°F/33°F</p>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="one">
-                <p> Friday </p>
-                <img src="media/rain.svg" alt="rain" width="120"/>
-                <p>52°F/33°F</p>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="one">
-                <p> Saturday </p>
-                <img src="media/rain.svg" alt="rain" width="120"/>
-                <p>52°F/33°F</p>
-              </div>
-            </div>
-              
-            </div>
-      
-          </div>
-           </div>
-          </div>
-        </div>
-        </div>
+      </div>
     </div>
 
-    <script src="src/java.js">
-
-  
-    </script>
-   
-    <p class="footer"> 👩🏼‍💻  Jaclyn Applegate 
-            <a href="https://github.com/jaclynapplegate/Weather-App">GitHub</a></p>
- </div>
-          </div>
+    <p class="footer">
+      👩🏼‍💻 Jaclyn Applegate,
+      <a href="https://github.com/jaclynapplegate/Weather-App"
+        >Open Source on GitHub</a
+      >
+    </p>
+    <script src="src/java.js"></script>
   </body>
 </html>

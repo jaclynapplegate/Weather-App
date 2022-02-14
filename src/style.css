@@ -38,7 +38,7 @@ body {
 #search-form {
   margin: 60px;
   position: absolute;
-  right: 280px;
+  right: 200px;
 }
 
 #search-text {
@@ -58,10 +58,6 @@ body {
 .fas {
   color: #8768fb;
   font-size: 25px;
-}
-
-.current {
-  max-height: 400px;
 }
 
 .currentForcast {
@@ -99,7 +95,6 @@ ul {
 }
 
 .currentImage {
-  margin: auto 0;
   max-height: 200px;
 }
 
