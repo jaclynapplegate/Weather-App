@@ -1,29 +1,44 @@
 body {
+  font-family: "open sans condensed", sans-serif;
+}
+.weather-app-wrapper {
   font-family: "Open Sans Condensed", sans-serif;
+  max-width: 800px;
+  margin: 30px auto;
+  border: 1px solid gray;
+  border-radius: 30px;
 }
 
 .top {
   background-color: #eeefef;
+  border-radius: 30px;
   height: 180px;
 }
 
 .name {
-  padding-top: 30px;
+  padding-top: 20px;
   text-align: center;
   color: gray;
   font-weight: 700;
+  font-size: 30px;
 }
 
-h3 {
-  text-align: center;
-  padding: 10px 30px;
+#date {
   color: gray;
+  font-size: 20px;
+  text-align: center;
+}
+
+#time {
+  color: gray;
+  font-size: 20px;
+  text-align: center;
 }
 
 #search-form {
   margin: 60px;
   position: absolute;
-  right: 100px;
+  right: 280px;
 }
 
 #search-text {
@@ -42,7 +57,11 @@ h3 {
 
 .fas {
   color: #8768fb;
-  size: 50px;
+  font-size: 25px;
+}
+
+.current {
+  max-height: 400px;
 }
 
 .currentForcast {
@@ -80,7 +99,8 @@ ul {
 }
 
 .currentImage {
-  margin: 0px -300px;
+  margin: auto 0;
+  max-height: 200px;
 }
 
 .future {
@@ -89,11 +109,12 @@ ul {
   display: block;
   background-color: #8768fb;
   text-align: center;
+  border-radius: 30px;
 }
 
 .footer {
   text-align: center;
-  color: white;
+  color: #8768fb;
 }
 
 .one {
