@@ -32,29 +32,28 @@
       <div class="weather-app-wrapper">
         <div class="top">
           <div class="row">
-            <div class="col-4">
+            <div class="col">
               <h1 class="name">Purple Moon Weather</h1>
               <p class="timeStamp"></p>
               <div id="date">January 16, 2022</div>
               <div id="time">10:00 AM</div>
             </div>
-            <div class="col-4">
+            <div class="col">
               <form id="search-form">
                 <input type="text" placeholder="search city" id="search-text" />
                 <input type="submit" value="search" id="search-submit" />
                 <i class="fas fa-map-marker-alt"></i>
               </form>
             </div>
-
             <div class="current">
               <div class="row">
-                <div class="col-4">
+                <div class="col">
                   <img class="currentImage" src="media/sun.svg" alt="sun" />
                 </div>
               </div>
             </div>
 
-            <div class="col-4">
+            <div class="col">
               <div class="currentForcast">
                 <p class="city">San Francisco</p>
                 <p class="currentTemp">
@@ -62,16 +61,15 @@
                 </p>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col">
               <div class="weatherDetails">
                 <ul>
-                  <li>Partly Cloudy</li>
-                  <li>Humidity: 10%</li>
-                  <li>Wind: 3 MPH</li>
+                  <li id="description">Partly Cloudy</li>
+                  <li>Humidity: <span id="humidity">10</span>%</li>
+                  <li>Wind: <span id="wind">3</span> MPH</li>
                 </ul>
               </div>
             </div>
-
             <div class="future">
               <div class="row">
                 <div class="col-2">
