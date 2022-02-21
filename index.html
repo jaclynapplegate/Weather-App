@@ -51,18 +51,14 @@
         <div class="current">
           <div class="row">
             <div class="col">
-              <img
-                class="currentIcon"
-                src="http://openweathermap.org/img/wn/10d@2x.png"
-                alt="sun"
-              />
-            </div>
-
-            <div class="col">
               <div class="currentForcast">
                 <p class="city">San Francisco</p>
                 <p class="currentTemp">
-                  <strong>18</strong> <span class="units"> °F | °C</span>
+                  <strong>18</strong>
+                  <span class="units">
+                    <span id="faherenheit"> °F </span> |
+                    <span id="celcius">°C</span></span
+                  >
                 </p>
               </div>
             </div>
@@ -75,6 +71,13 @@
                   <li>Wind: <span id="wind">3</span> MPH</li>
                 </ul>
               </div>
+            </div>
+            <div class="col">
+              <img
+                class="currentIcon"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                alt="sun"
+              />
             </div>
           </div>
         </div>
@@ -126,15 +129,15 @@
             </div>
           </div>
         </div>
-
-        <p class="footer">
-          👩🏼‍💻 Jaclyn Applegate,
-          <a href="https://github.com/jaclynapplegate/Weather-App"
-            >Open Source on GitHub</a
-          >
-        </p>
       </div>
     </div>
+
+    <p class="footer">
+      👩🏼‍💻 Jaclyn Applegate,
+      <a href="https://github.com/jaclynapplegate/Weather-App"
+        >Open Source on GitHub</a
+      >
+    </p>
     <script src="src/java.js"></script>
   </body>
 </html>

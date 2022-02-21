@@ -1,38 +1,41 @@
 body {
   font-family: "open sans condensed", sans-serif;
+  background-color: antiquewhite;
 }
 .weather-app-wrapper {
   font-family: "Open Sans Condensed", sans-serif;
   max-width: 800px;
+  max-height: 510px;
+  background-color: #d7cefa;
   margin: 30px auto;
-  border: 1px solid gray;
+  border: 3px solid #8768fb;
   border-radius: 30px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
 }
 
 .top {
-  background-color: #eeefef;
   border-radius: 30px;
-  height: 180px;
+  padding-bottom: 30px;
 }
 
 .name {
   padding-top: 20px;
   text-align: center;
-  color: gray;
+  color: #8768fb;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 #date {
   color: gray;
   font-size: 20px;
-  text-align: center;
+  margin-left: 16px;
 }
 
 #time {
   color: gray;
   font-size: 20px;
-  text-align: center;
+  margin-left: 16px;
 }
 
 #search-form {
@@ -47,8 +50,8 @@ body {
 }
 
 #search-submit {
-  color: white;
-  background: #8768fb;
+  color: White;
+  background-color: #8768fb;
   border-radius: 30px;
   width: 100px;
   height: 50px;
@@ -62,16 +65,21 @@ body {
 
 .currentForcast {
   color: gray;
-  margin: 50px 300px;
+  text-align: center;
+}
+
+.units {
+  cursor: pointer;
+}
+
+.currentIcon {
+  margin-top: 20px;
+  margin-left: -150px;
 }
 
 .city {
   font-size: 30px;
   font-weight: 700;
-}
-
-.weatherDescription {
-  font-style: italic;
 }
 
 .currentTemp strong {
@@ -89,21 +97,23 @@ body {
   cursor: pointer;
 }
 
+.weatherDetails {
+  margin-top: 30px;
+  margin-left: -50px;
+  font-weight: 700;
+  color: gray;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
   text-transform: capitalize;
 }
 
-.currentImage {
-  max-height: 200px;
-}
-
 .future {
   padding: 20px;
-  height: 250px;
+  height: 200px;
   display: block;
-  background-color: #8768fb;
   text-align: center;
   border-radius: 30px;
 }
@@ -111,6 +121,8 @@ ul {
 .footer {
   text-align: center;
   color: #8768fb;
+  font-family: "open sans condensed", sans-serif;
+  font-size: small;
 }
 
 .one {

@@ -54,6 +54,8 @@ function showWeather(response) {
   let wind = document.querySelector("#wind");
   let currentIcon = document.querySelector(".currentIcon");
 
+  celciusTemp = response.data.main.temp;
+
   document.querySelector(".city").innerHTML = response.data.name;
   document.querySelector(".currentTemp strong").innerHTML = `${Math.round(
     response.data.main.temp
@@ -78,6 +80,11 @@ function searchForm(event) {
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=imperial`;
   axios.get(apiURL).then(showWeather);
 }
+
+searchForm("San Francisco");
+
+//global variables
+
 let form = document.querySelector("form");
 form.addEventListener("submit", searchForm);
 form.addEventListener("enter", searchForm);
