@@ -66,10 +66,15 @@ body {
 .currentForcast {
   color: gray;
   text-align: center;
+  text-decoration: none;
 }
 
-.units {
-  cursor: pointer;
+.current .active {
+  cursor: default;
+}
+
+.current .active:hover {
+  text-decoration: none;
 }
 
 .currentIcon {

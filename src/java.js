@@ -58,7 +58,7 @@ function showWeather(response) {
 
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#currentTemp strong").innerHTML = `${Math.round(
-    response.data.main.temp
+    celciusTemp
   )}`;
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = response.data.main.humidity;
@@ -68,12 +68,11 @@ function showWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   currentIcon.setAttribute("alt", response.data.weather[0].description);
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function search(city) {
   let apiKey = "c41f9f26f03f32443ecf40be638baf03";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiURL).then(showWeather);
 }
 
@@ -83,10 +82,36 @@ function handleSubmit(event) {
   search(searchInput.value);
 }
 
-search("San Francisco");
+//unit conversion
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#currentTemp strong");
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celciusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelciusTemp(event) {
+  event.preventDefault();
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#currentTemp strong");
+  temperatureElement.innerHTML = Math.round(celciusTemp);
+}
+
+let celciusTemp = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celciusLink = document.querySelector("#celcius");
+celciusLink.addEventListener("click", displayCelciusTemp);
 
 //global variables
 
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
 form.addEventListener("enter", handleSubmit);
+search("San Francisco");
