@@ -14,7 +14,6 @@ if (minutes < 10) {
 }
 
 let year = now.getFullYear();
-
 let days = [
   "Sunday",
   "Monday",
@@ -24,6 +23,7 @@ let days = [
   "Friday",
   "Saturday",
 ];
+
 let day = days[now.getDay()];
 
 let months = [
@@ -56,8 +56,8 @@ function showWeather(response) {
 
   celciusTemp = response.data.main.temp;
 
-  document.querySelector(".city").innerHTML = response.data.name;
-  document.querySelector(".currentTemp strong").innerHTML = `${Math.round(
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#currentTemp strong").innerHTML = `${Math.round(
     response.data.main.temp
   )}`;
   description.innerHTML = response.data.weather[0].description;
@@ -68,23 +68,25 @@ function showWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   currentIcon.setAttribute("alt", response.data.weather[0].description);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
-function searchForm(event) {
-  event.preventDefault();
+function search(city) {
   let apiKey = "c41f9f26f03f32443ecf40be638baf03";
-  let searchInput = document.querySelector("#search-text");
-  let city = document.querySelector(".city");
-
-  city.innerHTML = `${searchInput.value}`;
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=imperial`;
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiURL).then(showWeather);
 }
 
-searchForm("San Francisco");
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-text");
+  search(searchInput.value);
+}
+
+search("San Francisco");
 
 //global variables
 
 let form = document.querySelector("form");
-form.addEventListener("submit", searchForm);
-form.addEventListener("enter", searchForm);
+form.addEventListener("submit", handleSubmit);
+form.addEventListener("enter", handleSubmit);
