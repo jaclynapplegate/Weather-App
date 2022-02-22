@@ -1,4 +1,4 @@
-// ADD DATE & TIME
+// DATE & TIME
 
 let now = new Date();
 let dateNow = document.querySelector("#date");
@@ -82,7 +82,7 @@ function handleSubmit(event) {
   search(searchInput.value);
 }
 
-//unit conversion
+//TEMP UNIT CONVERSION
 
 function displayFahrenheitTemp(event) {
   event.preventDefault();
@@ -109,9 +109,37 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 let celciusLink = document.querySelector("#celcius");
 celciusLink.addEventListener("click", displayCelciusTemp);
 
-//global variables
+//FORECAST
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thursday", "Friday", "Saturday", "Sunday"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col-2">
+      <p class="weather-forecast-date">${day}</p>
+      <img src="media/rain.svg" alt="rain" width="100" />
+      <p class="weather-forecast-temp">
+        <span class="weather-forecast-temp-hight">52°F</span> /
+        <span class="weather-forecast-temp-min">33°F</span>
+      </p>
+    </div>
+</div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
+//GLOBAL VARIABLES
 
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
 form.addEventListener("enter", handleSubmit);
 search("San Francisco");
+displayForecast();
